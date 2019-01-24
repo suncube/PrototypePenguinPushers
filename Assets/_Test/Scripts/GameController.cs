@@ -28,6 +28,13 @@ public class GameController : MonoBehaviour
     private int currentEnemies;
     private void Awake()
     {
+        LaunchInit();
+
+        StartGame();
+    }
+
+    private void LaunchInit()
+    {
         // for restart
         enemyPositions = new Vector3[m_Enemies.Length];
         for (var index = 0; index < m_Enemies.Length; index++)
@@ -36,12 +43,11 @@ public class GameController : MonoBehaviour
         }
 
         startPlayer = m_Player.position;
+        m_FinishPlace.OnFinished += OnEnemyFinished;
         //
-
-        Initialize();
     }
 
-    public void Initialize()
+    public void StartGame()
     {
         // for restart
         m_Player.position = startPlayer;
@@ -62,7 +68,6 @@ public class GameController : MonoBehaviour
 
         currentEnemies = m_MaxEnemies;
         UpdateProgressStatus();
-        m_FinishPlace.OnFinished += OnEnemyFinished;
     }
 
     private void UpdateProgressStatus()
