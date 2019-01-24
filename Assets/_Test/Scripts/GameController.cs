@@ -36,6 +36,7 @@ public class GameController : MonoBehaviour
     private void LaunchInit()
     {
         // for restart
+        //
         enemyPositions = new Vector3[m_Enemies.Length];
         for (var index = 0; index < m_Enemies.Length; index++)
         {
