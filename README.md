@@ -16,6 +16,3 @@ A source:
 
 ![](/ReadmeSource/preview2.gif)
 
-
-#
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.donationalerts.com/r/suncube)
